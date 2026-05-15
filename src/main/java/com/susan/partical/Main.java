@@ -48,6 +48,10 @@ public class Main {
             case "firework":  // 另一种自定义效果
                 emitter = createFireworkEmitter(rate);
                 break;
+            case "mouse_fountain":
+                emitter = createMouseFountainEmitter(rate);
+                boundDamp = 0.3;
+                break;
             default:
                 System.out.println("Unknown mode: " + mode);
                 System.exit(1);
@@ -209,6 +213,42 @@ public class Main {
         };
     }
 
+    /** 鼠标跟随喷泉 */
+    public static ParticleSystem.Emitter createMouseFountainEmitter(int rate) {
+        return () -> {
+            Particle[] batch = new Particle[rate];
+            for (int i = 0; i < rate; i++) {
+                // 1. 获取当前鼠标位置
+                double mx = StdDraw.mouseX();
+                double my = StdDraw.mouseY();
 
+                // 如果鼠标移出坐标范围(0,0)-(1,1)，默认置为画布中心
+                if (mx < 0 || mx > 1 || my < 0 || my > 1) {
+                    mx = 0.5;
+                    my = 0.5;
+                }
+
+                // 2. 角度在 70°~110° 随机，计算速度
+                double angle = 70 + Math.random() * 40;
+                double rad = Math.toRadians(angle);
+                
+                // 初速度 1.2~2.5
+                double speed = 1.2 + Math.random() * 1.3;
+                double vx = speed * Math.cos(rad);
+                double vy = speed * Math.sin(rad);
+
+                // 5. 寿命 1.5~2.5；半径 0.008~0.015
+                double life = 1.5 + Math.random() * 1.0;
+                double r = 0.008 + Math.random() * 0.007;
+
+                // 4. 不透明的亮蓝色 (0, 150, 255)
+                Color c = new Color(0, 150, 255);
+
+                // 调用构造函数，设置重力加速度 ay = -3.0，保持半径不变 ra_variation = 1.0
+                batch[i] = new Particle(mx, my, vx, vy, 0, -3.0, life, r, 1.0, c);
+            }
+            return batch;
+        };
+    }
 
 }

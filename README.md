@@ -77,3 +77,7 @@ __比起前两个类，这次的particle我尝试加入javadoc来使类更可读
   - 先用鼠标定位的效果做一个喷泉（改良喷泉）
   - 一种全新的效果（例如“漩涡/龙卷风”，我还没做过）
   - 练习“用 AI 编程助手生成代码 + 审查整合（因为我之前的代码也写了很多，要保证之前的能运行，融合起来也很有难 度）”
+
+## README_Part2  
+后续ai写的第二部分的README内容在 __README_Part2__ 里，点击跳转：
+[README_Part2](src/docs/chats/README_Part2.md)

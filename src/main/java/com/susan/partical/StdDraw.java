@@ -2057,7 +2057,10 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
      */
     @Override
     public void mouseExited(MouseEvent event) {
-        // this body is intentionally left empty
+        synchronized (MOUSE_LOCK) {
+            mouseX = -1;
+            mouseY = -1;
+        }
     }
 
     /**
