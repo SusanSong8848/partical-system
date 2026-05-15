@@ -1,3 +1,17 @@
+## 新增ai实现的两种粒子效果（mouse_fountain(随鼠标移动喷泉)，vortex(龙卷风/旋涡)）：
+
+6. firework：  
+- 命令行输入：`java Main.java -mode mouse_fountain -rate 6`  
+- 运行结果：  
+  <video controls src="../../../imgs/mouseFountain.mp4" title="mouse_fountain"></video>  
+
+7. firework：  
+- 命令行输入：`java Main.java -mode vortex -rate 6`  
+- 运行结果：  
+  <video controls src="../../../imgs/vortex.mp4" title="vortex"></video>  
+
+
+
 ## 项目结构 (Project Structure)
 
 ```text

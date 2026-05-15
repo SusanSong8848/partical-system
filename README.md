@@ -38,22 +38,22 @@ __比起前两个类，这次的particle我尝试加入javadoc来使类更可读
 - 运行结果：  
   <video controls src="imgs/fountain.mp4" title="fountain"></video>  
 
-1. explosion：  
+2. explosion：  
 - 命令行输入：`java Main.java -mode explosion -rate 500`  
 - 运行结果：  
   <video controls src="imgs/explosion.mp4" title="explosion"></video>  
 
-1. smoke：  
+3. smoke：  
 - 命令行输入：`java Main.java -mode smoke -rate 1`  
 - 运行结果：  
   <video controls src="imgs/smoke.mp4" title="smoke"></video>  
 
-1. rain：  
+4. rain：  
 - 命令行输入：`java Main.java -mode rain -rate 20`  
 - 运行结果：  
   <video controls src="imgs/rain.mp4" title="rain"></video>
 
-1. firework：  
+5. firework：  
 - 命令行输入：`java Main.java -mode firework -rate 200`  
 - 运行结果：  
   <video controls src="imgs/firework.mp4" title="firework"></video>  

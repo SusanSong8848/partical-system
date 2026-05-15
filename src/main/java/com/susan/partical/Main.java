@@ -48,6 +48,10 @@ public class Main {
             case "firework":  // 另一种自定义效果
                 emitter = createFireworkEmitter(rate);
                 break;
+            case "vortex":    // 漩涡/龙卷风效果
+                emitter = createVortexEmitter(rate);
+                boundDamp = 0.5;
+                break;
             case "mouse_fountain":
                 emitter = createMouseFountainEmitter(rate);
                 boundDamp = 0.3;
@@ -251,4 +255,59 @@ public class Main {
         };
     }
 
+    /**
+     * 漩涡/龙卷风粒子发射器 (Vortex / Tornado Emitter)
+     * 生成一个具有切向旋转、向心汇聚与垂直上升多重速度叠加的粒子效果。
+     * <p>
+     * <b>关于 dist 的重要说明：</b>
+     * 粒子在生成时，基于中心点 (0.5, 0.5) 并在距离其 {@code dist} 的圆形区域内随机分布。
+     * 如果 {@code dist} 能够等于 0，那么粒子将在绝对中心生成，这不仅会导致此时极角 {@code angle} 失去几何意义，
+     * 还可能在包含引力或斥力计算时引发被零除（Divide by Zero）的异常和奇点效应。
+     * 为避免此风险，通过 {@code dist = Math.random() * 0.1 + 0.001;} 强制保留 0.001 的正偏移量。
+     * </p>
+     * @param rate 每帧发射的粒子数
+     * @return 粒子发射器实例
+     */
+    private static ParticleSystem.Emitter createVortexEmitter(int rate) {
+        return new ParticleSystem.Emitter() {
+            @Override
+            public Particle[] emit() {
+                Particle[] p = new Particle[rate];
+                for (int i = 0; i < rate; i++) {
+                    // 1. 位置计算：在距离中心(0.5, 0.5)一定圆环区域内随机产生
+                    double angle = Math.random() * 2 * Math.PI; // 极角
+                    double dist = Math.random() * 0.1 + 0.001;  // 避免正好为0
+                    double x = 0.5 + dist * Math.cos(angle);
+                    double y = 0.5 + dist * Math.sin(angle);
+
+                    // 2. 速度计算
+                    // 切向方向：angle + 90°(即 Math.PI / 2)
+                    double v_tangential = 0.5 + Math.random(); // 0.5 ~ 1.5
+                    // 向心方向：指向中心，因为沿极角向外为正，因此给负值即可向内汇聚
+                    double v_radial = -(0.2 + Math.random() * 0.3); // -0.2 ~ -0.5
+                    // 垂直向上速度
+                    double v_up = 0.3 + Math.random() * 0.5; // 0.3 ~ 0.8
+                    
+                    double vx = v_radial * Math.cos(angle) + v_tangential * Math.cos(angle + Math.PI / 2);
+                    double vy = v_radial * Math.sin(angle) + v_tangential * Math.sin(angle + Math.PI / 2) + v_up;
+
+                    // 3. 加速度计算
+                    // 向心加速度：指向中心(-0.1) 和 重力向下的加速度(-1.0)
+                    double ax = -0.1 * Math.cos(angle);
+                    double ay = -0.1 * Math.sin(angle) - 1.0;
+
+                    // 4. 其他属性
+                    double life = 1.0 + Math.random() * 1.5; // 1.0 ~ 2.5
+                    double radius = 0.005 + Math.random() * 0.007; // 0.005 ~ 0.012
+                    double ra_variation = 0.995;
+                    
+                    // 5. 颜色：随机色相，高饱和度，高亮度
+                    Color color = Color.getHSBColor((float) Math.random(), 0.8f, 1.0f);
+                    
+                    p[i] = new Particle(x, y, vx, vy, ax, ay, life, radius, ra_variation, color);
+                }
+                return p;
+            }
+        };
+    }
 }
