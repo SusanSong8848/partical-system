@@ -92,8 +92,8 @@ __比起前两个类，这次的particle我尝试加入javadoc来使类更可读
 
 ## README_Part2  
 后续ai写的第二部分的README内容在 __README_Part2__ 里，点击跳转：  
-[README_Part2](src/docs/chats/README_Part2.md)
+[README_Part2](src/docs/md/README_Part2.md)
 
 ## README_afterall
 这个是针对整个项目（包括我手动编写粒子系统 + ai辅助编程粒子系统）的 __README_afterall__ 文件，点击跳转：  
-[README_afterall](src/docs/chats/README_afterall.md)
+[README_afterall](src/docs/md/README_afterall.md)

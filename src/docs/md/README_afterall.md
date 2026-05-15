@@ -79,3 +79,6 @@ Lab4_10255102520_宋易乐_particle_system/
                         ParticleSystem.java # 全局系统控制器，负责批量管理更新与渲染
                         StdDraw.java        # Princeton标准绘图库，内嵌于项目中
 ```
+## Github:  
+我已将该项目同步到我的github上：
+地址：https://github.com/SusanSong8848/partical-system
