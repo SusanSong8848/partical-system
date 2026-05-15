@@ -10,6 +10,11 @@
 - 运行结果：  
   <video controls src="../../../imgs/vortex.mp4" title="vortex"></video>  
 
+## vibe-coding的chats:
+- [Java 粒子系统鼠标跟随喷泉实现](../chats/chat1.json)  
+- [Java 粒子系统项目优化建议与脚本创建](../chats/chat2.json)  
+- [设计漩涡粒子效果的方法与逻辑](../chats/chat3.json)  
+- [Java 粒子系统 README 文件编写指南](../chats/chat4.json)  
 
 
 ## 项目结构 (Project Structure)
