@@ -2,6 +2,13 @@
 
 -----
 
+# 这是README_afterall：
+这个是针对整个项目（包括我手动编写粒子系统 + ai辅助编程粒子系统）的 __README_afterall__ 文件，点击跳转：  
+[README_afterall](src/docs/chats/README_afterall.md)
+
+-----
+# 这是作业：
+
 # 第一部分：
 
 ## 1.  
@@ -36,27 +43,32 @@ __比起前两个类，这次的particle我尝试加入javadoc来使类更可读
 1. fountain：  
 - 命令行输入：`java Main.java -mode fountain -rate 6 -dt 0.02`  或者直接 `java Main.java`(因为是喷泉模式是默认的)
 - 运行结果：  
-  <video controls src="imgs/fountain.mp4" title="fountain"></video>  
+  <video controls src="imgs/fountain.mp4" title="fountain"></video> 
+  [链接：imgs/fountain.mp4](imgs/fountain.mp4)  
 
 2. explosion：  
 - 命令行输入：`java Main.java -mode explosion -rate 500`  
 - 运行结果：  
   <video controls src="imgs/explosion.mp4" title="explosion"></video>  
+  [链接：imgs/explosion.mp4](imgs/explosion.mp4)  
 
 3. smoke：  
 - 命令行输入：`java Main.java -mode smoke -rate 1`  
 - 运行结果：  
-  <video controls src="imgs/smoke.mp4" title="smoke"></video>  
+  <video controls src="imgs/smoke.mp4" title="smoke"></video> 
+  [链接：imgs/smoke.mp4](imgs/smoke.mp4)   
 
 4. rain：  
 - 命令行输入：`java Main.java -mode rain -rate 20`  
 - 运行结果：  
-  <video controls src="imgs/rain.mp4" title="rain"></video>
+  <video controls src="imgs/rain.mp4" title="rain"></video>  
+  [链接：imgs/rain.mp4](imgs/rain.mp4)  
 
 5. firework：  
 - 命令行输入：`java Main.java -mode firework -rate 200`  
 - 运行结果：  
   <video controls src="imgs/firework.mp4" title="firework"></video>  
+  [链接：imgs/firework.mp4](imgs/firework.mp4)  
 
 
 
@@ -76,7 +88,7 @@ __比起前两个类，这次的particle我尝试加入javadoc来使类更可读
   - 使用鼠标指针或其他任何方式控制粒子的发射点（点哪就从哪喷射）。
   - 先用鼠标定位的效果做一个喷泉（改良喷泉）
   - 一种全新的效果（例如“漩涡/龙卷风”，我还没做过）
-  - 练习“用 AI 编程助手生成代码 + 审查整合（因为我之前的代码也写了很多，要保证之前的能运行，融合起来也很有难 度）”
+  - 练习“用 AI 编程助手生成代码 + 审查整合（因为我之前的代码也写了很多，要保证之前的能运行，融合起来也很有难度）”
 
 ## README_Part2  
 后续ai写的第二部分的README内容在 __README_Part2__ 里，点击跳转：  

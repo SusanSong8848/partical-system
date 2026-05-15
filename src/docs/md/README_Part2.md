@@ -3,12 +3,14 @@
 6. firework：  
 - 命令行输入：`java Main.java -mode mouse_fountain -rate 6`  
 - 运行结果：  
-  <video controls src="../../../imgs/mouseFountain.mp4" title="mouse_fountain"></video>  
+  <video controls src="../../../imgs/mouseFountain.mp4" title="mouse_fountain"></video>
+  [链接：../../../imgs/mouseFountain.mp4](../../../imgs/mouseFountain.mp4)    
 
 7. firework：  
 - 命令行输入：`java Main.java -mode vortex -rate 6`  
 - 运行结果：  
   <video controls src="../../../imgs/vortex.mp4" title="vortex"></video>  
+  [链接：../../../imgs/vortex.mp4](../../../imgs/vortex.mp4)  
 
 ## vibe-coding的chats:
 - [Java 粒子系统鼠标跟随喷泉实现](../chats/chat1.json)  
