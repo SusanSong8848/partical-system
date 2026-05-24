@@ -22,6 +22,6 @@ if %errorlevel% neq 0 (
 del sources.txt
 
 echo [3/3] Running Particle System...
-java -cp "%OUT_DIR%" com.susan.partical.Main
+java -cp "%OUT_DIR%" com.susan.particle.Main
 
 pause

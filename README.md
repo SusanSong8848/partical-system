@@ -13,13 +13,13 @@
 
 ## 1.  
 __比起前两个类，这次的particle我尝试加入javadoc来使类更可读__  
-- 粒子类：[ParticleSystem.java的代码](src/main/java/com/susan/partical/ParticleSystem.java)  
+- 粒子类：[ParticleSystem.java的代码](src/main/java/com/susan/particle/ParticleSystem.java)  
 - 我新增了粒子属性 `ra_variationprivate` ，因为烟雾特效的粒子半径会变大;
   >double ra_variation;        // 新增：粒子大小变化
 
 
 ## 2.
-- 粒子系统类：[ParticleSystem.java的代码](src/main/java/com/susan/partical/ParticleSystem.java)  
+- 粒子系统类：[ParticleSystem.java的代码](src/main/java/com/susan/particle/ParticleSystem.java)  
 
 - - 这个Emitter是一个 __函数类接口__（只有一个emit()抽象函数），方便在后面main函数中创建 __【实现了emit()的Emitter的对象】__（意思就是创建对象的时候再去实现，这样就可以实现每个对象的emit()都可以不同（如喷泉，爆炸，烟雾）--> __多态__）  
   - 这里main函数里的对象定义为emmiter，通过函数不同调用使emitter实现不同的特性（喷泉，爆炸，烟雾）  
@@ -38,7 +38,7 @@ __比起前两个类，这次的particle我尝试加入javadoc来使类更可读
 
 ## 3.  
 
-不同粒子系统的具体实现：[Main.java的代码](src/main/java/com/susan/partical/Main.java)  
+不同粒子系统的具体实现：[Main.java的代码](src/main/java/com/susan/particle/Main.java)  
 
 1. fountain：  
 - 命令行输入：`java Main.java -mode fountain -rate 6 -dt 0.02`  或者直接 `java Main.java`(因为是喷泉模式是默认的)

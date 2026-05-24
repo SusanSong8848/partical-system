@@ -15,10 +15,10 @@
 ```bat
 :: 创建输出目录并编译所有源文件
 if not exist bin mkdir bin
-javac -d bin src/main/java/com/susan/partical/*.java
+javac -d bin src/main/java/com/susan/particle/*.java
 
 :: 运行主程序 (默认效果)
-java -cp bin com.susan.partical.Main
+java -cp bin com.susan.particle.Main
 ```
 
 *(如果项目根目录下的 `build.bat` 已经写好了自动构建逻辑，您可以直接双击或运行 `build.bat` 来执行编译和启动工作。)*
@@ -44,7 +44,7 @@ java -cp bin com.susan.partical.Main
 
 **运行示例（附带参数）：**
 ```bash
-java -cp bin com.susan.partical.Main -mode vortex -rate 10 -dt 0.5 -time 60
+java -cp bin com.susan.particle.Main -mode vortex -rate 10 -dt 0.5 -time 60
 ```
 
 ## 如何修改配置文件
@@ -81,4 +81,4 @@ Lab4_10255102520_宋易乐_particle_system/
 ```
 ## Github:  
 我已将该项目同步到我的github上：
-地址：https://github.com/SusanSong8848/partical-system
+地址：https://github.com/SusanSong8848/particle-system

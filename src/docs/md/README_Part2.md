@@ -33,7 +33,7 @@
         ├── java/
         │   └── com/
         │       └── susan/
-        │           └── partical/
+        │           └── particle/
         │                   Main.java
         │                   Particle.java
         │                   ParticleSystem.java
@@ -50,4 +50,4 @@
 ```bat
 .\build.bat
 ```
-*(如果需要运行特定模式如 `-mode smoke`，可手动执行：`java -cp out com.susan.partical.Main -mode smoke -rate 1`)*
+*(如果需要运行特定模式如 `-mode smoke`，可手动执行：`java -cp out com.susan.particle.Main -mode smoke -rate 1`)*
